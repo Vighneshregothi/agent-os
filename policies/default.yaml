@@ -1,0 +1,20 @@
+{
+  "policy_set": "default",
+  "version": 1,
+  "rules": [
+    {
+      "policy_id": "block_login_submit",
+      "action_type": "SUBMIT",
+      "url_pattern": "*login*",
+      "effect": "DENY",
+      "reason": "Login submission requires human approval"
+    },
+    {
+      "policy_id": "allow_known_actions",
+      "action_type": "*",
+      "url_pattern": "*",
+      "effect": "ALLOW",
+      "reason": "Allowed by default policy"
+    }
+  ]
+}

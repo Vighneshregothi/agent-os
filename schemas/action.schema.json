@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["action_type", "target", "url"],
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "enum": ["NAVIGATE", "CLICK", "TYPE", "SUBMIT", "DOWNLOAD"]
+    },
+    "target": {"type": "string"},
+    "url": {"type": "string"},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": true
+}
