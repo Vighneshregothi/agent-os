@@ -127,3 +127,9 @@ AgentOS is **security & governance infrastructure**, comparable to Zero-Trust sy
 ## License
 
 TBD
+
+---
+
+## Immediate Next Step
+
+See `NEXT_STEP.md` for the selected implementation step and completion criteria.
