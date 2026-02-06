@@ -133,3 +133,27 @@ TBD
 ## Immediate Next Step
 
 See `NEXT_STEP.md` for the selected implementation step and completion criteria.
+
+
+---
+
+
+## Firewall v0 Implementation (Current)
+
+Implemented minimal execution firewall components:
+
+- `agent/molt.py`: planner-only action request producer (no browser execution)
+- `gateway/action_gateway.py`: mandatory validation + policy + execution + audit flow
+- `gateway/policy_engine.py`: deterministic first-match policy evaluation
+- `gateway/executor.py`: one-action dispatcher guarded by gateway-issued execution ticket
+- `audit/logger.py`: append-only JSONL audit writes
+- `schemas/action.schema.json`: action contract and action-type allowlist
+- `policies/default.yaml`: login-submit deny rule plus explicit allow rule
+- `tests/test_firewall.py`: required failure-mode tests
+
+Run tests:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
